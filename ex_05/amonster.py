@@ -1,7 +1,7 @@
 from iunit import IUnit
 
 class AMonster(IUnit):
-    def __init__(self, name, hp=0, ap=0, damage=0, apcost=0, dead=False):
+    def __init__(self, name, hp=0, ap=0, damage=0, apcost=0):
         self.name=name
         self.hp=hp
         self.ap=ap
