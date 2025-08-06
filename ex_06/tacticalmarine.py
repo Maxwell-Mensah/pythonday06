@@ -1,9 +1,9 @@
 from aspacemarine import ASpaceMarine
-from plasmarifle import Plasmarifle
+from plasmarifle import PlasmaRifle
 
 class TacticalMarine(ASpaceMarine):
-    def __init__(self):
-        super().__init__(self, name, hp=100, ap=20, weapon=Plasmarifle)
+    def __init__(self, name, ):
+        super().__init__(name, hp=100, ap=20, weapon=PlasmaRifle())
         print(f"{self.name} on duty")
 
     def receiveDamage(self, damage):

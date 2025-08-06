@@ -1,4 +1,5 @@
 from iunit import IUnit
+from aweapon import AWeapon
 
 class ASpaceMarine(IUnit):
     def __init__(self, name, hp=0, ap=0, weapon=None):

@@ -1,9 +1,10 @@
 from amonster import AMonster
 
 class SuperMutant(AMonster):
-    _num=0
+    _num=1
     def __init__(self):
-        super().__init__(name=f"SuperMutant {_num}", hp=170, ap=20, damage=60, apcost=20, dead=False)
+        super().__init__(name=f"SuperMutant {SuperMutant._num}", hp=170, ap=20, damage=60, apcost=20)
+        SuperMutant._num+=1
         print(f"{self.name}: Roaarrr !")
 
     def receiveDamage(self, damage):

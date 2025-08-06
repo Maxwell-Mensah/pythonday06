@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class AWeapon(ABC):
     def __init__(self, name, apcost, damage, melee=False):
-        if type(name)!=str or type (apcost)!= int or type(damage)!=int or type(melee)!=bool:
+        if type(name).__name__!="str" or type(apcost).__name__!="int" or type(damage).__name__!="int" or type(melee).__name__!="bool":
             print("Error in AWeapon constructor, Bad parameters")
             return None
         self.name=name
@@ -19,7 +19,7 @@ class AWeapon(ABC):
     def getDamage(self):
         return self.damage
     
-    def ismelee(self):
+    def isMelee(self):
         return self.melee
 
     @abstractmethod

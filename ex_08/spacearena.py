@@ -1,3 +1,6 @@
+from amonster import AMonster
+from aspacemarine import ASpaceMarine
+
 class SpaceArena():
 
     def __init__(self):
@@ -6,7 +9,7 @@ class SpaceArena():
     def enlistMonsters(self, monsters : list):
         for monst in monsters:
             if isinstance(monst, AMonster):
-                if monst not in (monster_list):
+                if monst not in (self.monster_list):
                     (self.monster_list).append(monst)
             else:
                 print("Stop trying to cheat !")
@@ -14,18 +17,18 @@ class SpaceArena():
     
 
     def enlistSpaceMarines(self, space_marines : list):
-        for marines in space_marines:
-            if isinstance(monst, ASpaceMarine):
-                if marine not in space:
+        for marine in space_marines:
+            if isinstance(marine, ASpaceMarine):
+                if marine not in self.space_list:
                     (self.space_list).append(marine)
             else:
                 print("Stop trying to cheat !")
     
-    def fight():
-        if len(monster_list)==0:
+    def fight(self):
+        if len(self.monster_list)==0:
             print("No monster available to fight")
             return
-        elif len(space)==0:
+        elif len(self.space_list)==0:
             print("Those cowards ran away")
             return
         else:
@@ -35,7 +38,7 @@ class SpaceArena():
                f_mon=self.monster_list[0]
                print(f"{f_mon.name} has enter the arena")
                while f_mar.hp>0 and f_mon.hp>0:
-                    if f_mar.ap>=f_mar.apcost:
+                    if f_mar.ap>=(f_mar.weapon).apcost:
                         f_mar.attack(f_mon)
                     else:
                         f_mar.recoverAP()

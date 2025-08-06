@@ -1,10 +1,10 @@
 from amonster import AMonster
 
 class RadScorpion(AMonster):
-    _num=0
+    _num=1
     def __init__(self):
-        super().__init__(name=f"RadScorpion {_num}", hp=80, ap=50, damage=25, apcost=8, dead=False)
-        _num+=1
+        super().__init__(name=f"RadScorpion #{RadScorpion._num}", hp=80, ap=50, damage=25, apcost=8)
+        RadScorpion._num+=1
         print(f"{self.name}: Crrr !")
 
     def receiveDamage(self, damage):

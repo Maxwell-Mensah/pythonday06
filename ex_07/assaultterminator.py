@@ -2,8 +2,8 @@ from aspacemarine import ASpaceMarine
 from powerfist import PowerFist
 
 class AssaultTerminator(ASpaceMarine):
-    def __init__(self):
-        super().__init__(self, name, hp=150, ap=30, weapon=PowerFist)
+    def __init__(self, name):
+        super().__init__(name, hp=150, ap=30, weapon=PowerFist())
         print(f"{self.name} has teleported form space")
 
     def receiveDamage(self, damage):

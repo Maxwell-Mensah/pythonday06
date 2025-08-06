@@ -1,4 +1,5 @@
 from iunit import IUnit
+from aweapon import AWeapon
 
 class ASpaceMarine(IUnit):
     def __init__(self, name, hp=0, ap=0, weapon=None):
@@ -41,7 +42,7 @@ class ASpaceMarine(IUnit):
             print(f"{self.name} attacks {param.name} with a {self.weapon.name}")
             (self.weapon).attack()
             param.receiveDamage((self.weapon).damage)
-            self.ap-=self.apcost
+            self.ap-=(self.weapon).apcost
 
         
 
